@@ -1,0 +1,57 @@
+\mode<presentation>
+\setbeamercolor*{author in head/foot}{fg=lubrown}
+\setbeamercolor*{section in head/foot}{fg=lubrown}
+\setbeamercolor*{date in head/foot}{fg=lubrown}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]%
+
+\defbeamertemplate*{footline}{sectionfootline}
+{
+        \leavevmode%
+        \hbox{%
+        \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,leftskip=2ex,rightskip=2ex,sep=0pt]{author in head/foot}%
+            \hfill%
+            \usebeamercolor[fg]{page number in head/foot}%
+            \usebeamerfont{page number in head/foot}%
+            \usebeamertemplate{page number in head/foot}%
+        \end{beamercolorbox}}%
+        \vskip0pt%
+}
+
+\defbeamertemplate*{footline}{infolines theme}
+{%
+    \ifnum \insertpagenumber=1
+        \leavevmode%
+        \hbox{%
+        \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,center]{}%
+        % empty environment to raise height
+        \end{beamercolorbox}}%
+        \vskip0pt%
+    \else
+        \leavevmode%
+        \hbox{%
+        \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+            \usebeamerfont{section in head/foot}\insertsectionhead
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,leftskip=2ex,rightskip=2ex,sep=0pt]{date in head/foot}%
+            \hfill%
+            \usebeamercolor[fg]{page number in head/foot}%
+            \usebeamerfont{page number in head/foot}%
+            \usebeamertemplate{page number in head/foot}%
+        \end{beamercolorbox}}%
+        \vskip0pt%
+    \fi
+}
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>

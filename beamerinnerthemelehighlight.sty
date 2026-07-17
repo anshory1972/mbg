@@ -1,0 +1,44 @@
+\mode<presentation>
+
+\defbeamertemplate*{title page}{customized}[1][]
+{ 
+    \begin{flushright}
+        \begin{beamercolorbox}[wd=\paperwidth,sep=8pt,right,#1]{title}
+        \ifx\inserttitlegraphic\@empty
+        \else
+            {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic}\hspace*{0.25in}
+        \fi
+        \end{beamercolorbox}
+        \vspace*{0.2\paperheight}
+        \begin{beamercolorbox}[wd=\paperwidth,sep=8pt,right,#1]{title}
+        \usebeamerfont{title}\inserttitle\hspace*{0.25in}
+        \ifx\insertsubtitle\@empty
+        \else
+            \vskip 0.5ex
+            {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\hspace*{0.25in}}
+        \fi
+        \end{beamercolorbox}
+        \vspace*{0.15\paperheight}
+        \begin{beamercolorbox}[wd=\paperwidth,sep=8pt,right,#1]{author}
+            \usebeamerfont{author}\insertauthor\hspace*{0.25in}\par
+            \vskip 0.5ex
+            \usebeamerfont{institute}\insertinstitute\hspace*{0.25in}\par
+            \vskip 0.5ex
+            \usebeamerfont{date}\insertdate\hspace*{0.25in}
+        \end{beamercolorbox}
+    \end{flushright}
+    \vskip0pt
+}
+
+% section page template
+\defbeamertemplate*{section page}{mysection}[1][]
+{
+    \begin{centering} 
+        \usebeamercolor[fg]{section title} 
+        \usebeamerfont{section title} 
+        \insertsection
+        \par 
+    \end{centering}   
+}
+\mode
+<all>
